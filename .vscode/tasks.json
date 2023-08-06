@@ -20,7 +20,7 @@
 			],
 			"dockerRun": {
 				"env": {
-					"FLASK_APP": "SadTalker/main.py"
+					"FLASK_APP": "main.py"
 				}
 			},
 			"python": {
