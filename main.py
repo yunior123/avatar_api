@@ -32,9 +32,12 @@ def get_talking_avatar():
     return video_binary
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+
+    app.run(debug=True, port=5000, host='0.0.0.0')
 
 
+
+# host = '
     # test = True
     # if test:
     #     image_name = 'happy'
