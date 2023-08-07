@@ -28,7 +28,9 @@ def main(args):
     ref_eyeblink = args.ref_eyeblink
     ref_pose = args.ref_pose
 
-    current_root_path = os.path.split(sys.argv[0])[0]
+    # example Documents/Github/avatar_api/main.py
+    # filter to get path containing avatar_api/main.py
+    current_root_path = os.path.dirname(os.path.abspath(__file__))
 
     sadtalker_paths = init_path(args.checkpoint_dir, os.path.join(current_root_path, 'src/config'), args.size, args.old_version, args.preprocess)
 
