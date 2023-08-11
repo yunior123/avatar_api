@@ -5,7 +5,7 @@ from IPython.display import display
 import torch
 from argparse import Namespace
 import ssl
-
+import asyncio
 import inference as inf
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -64,6 +64,7 @@ def get_parser(img_path, audio_path):
 
 
 def gen_video(image_name, image_binary, audio_name, audio_binary, test=False):
+  
     img_path = './images/{}.png'.format(image_name)
     with open(img_path, 'wb') as f:
         f.write(image_binary)
